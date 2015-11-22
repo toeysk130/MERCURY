@@ -2,7 +2,7 @@ var isInitiator;
 
 room = prompt("Enter room name:");
 
-var socket = io.connect();
+var socket = io.connect('http://testwebrtc.azurewebsites.net');
 
 if (room !== "") {
   console.log('Joining room ' + room);
