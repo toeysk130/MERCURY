@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://simplewebrtc.com/latest.js"></script>
+
+<meta name="keywords" content="WebRTC, HTML5, JavaScript" />
+<meta name="description" content="WebRTC Reference App" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+<title>WebRTC client</title>
+
 </head>
 
 <body>
 
-<div id="localVideo" muted></div>
-<div id="remoteVideo"></div>
-
-
-<script>
-var webrtc = new SimpleWebRTC({
-	localVideoEl: 'localVideo',
-	remoteVideosEl: 'remoteVideo',
-	autoRequestMedia: true
-});
-
-webrtc.on('readyToCall', function () {
-	webrtc.joinRoom('My room name');
-});
-</script>
+<script src='http://localhost:2013/socket.io/socket.io.js'></script>
+<script src='js/lib/adapter.js'></script>
+<script src="js/main.js"></script>
 
 </body>
-
 </html>
